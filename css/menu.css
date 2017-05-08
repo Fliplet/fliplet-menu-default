@@ -1,5 +1,4 @@
 /* MENU */
-
 .fl-with-top-menu {
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
@@ -61,7 +60,7 @@
 }
 
 .fl-viewport-header .nav-left {
-  left: 0px;
+  left: 0;
   line-height: 44px;
 }
 
@@ -83,30 +82,35 @@
   text-indent: -9999px;
   width: 0;
 }
-
 @media screen and (min-width: 640px) {
   .fl-with-top-menu {
     padding-top: 55px;
   }
+
   .fl-viewport-header {
     height: 55px;
     line-height: 54px;
     font-size: 1.2em;
   }
+
   .fl-viewport-header .nav-left,
   .fl-viewport-header .nav-right {
     height: 54px;
   }
+
   .fl-viewport-header .nav-right {
     width: 54px;
   }
+
   .fl-viewport-header .nav-left {
     line-height: 54px;
   }
+
   .fl-viewport-header .nav-left .fa {
     width: 54px;
     height: 54px;
   }
+
   .fl-viewport-header .nav-left .btn-label {
     padding: 0;
     text-indent: initial;
@@ -115,10 +119,7 @@
     left: -15px;
   }
 }
-
-
 /* Menu Overlay */
-
 .fl-menu {
   position: fixed;
   top: 0;
@@ -165,7 +166,7 @@
   -webkit-transform: translate3d(0, -16px, 0);
   opacity: 0;
   pointer-events: none;
-  border-radius: 0px;
+  border-radius: 0;
   z-index: 20;
   display: -webkit-box;
   display: -webkit-flex;
@@ -188,7 +189,6 @@
   position: absolute;
   top: -22px;
   right: 5px;
-  margin-left: -11px;
 }
 
 .fl-menu.active .fl-menu-panel {
@@ -328,7 +328,6 @@
 .fl-app-menu-logo:empty {
   display: none;
 }
-
 @media screen and (min-width: 640px) {
   .fl-menu-panel {
     top: 70px;
