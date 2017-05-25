@@ -11,8 +11,7 @@
     "dependencies": [
       "bootstrap",
       "font-awesome",
-      "fliplet-core",
-      "handlebars"
+      "fliplet-core"
     ],
     "assets": [
       "css/menu.css",
