@@ -1,5 +1,5 @@
 {
-  "name": "Dropdown with right icon",
+  "name": "Dropdown",
   "package": "com.fliplet.menu.default",
   "version": "1.0.0",
   "icon": "img/icon.png",
@@ -11,11 +11,22 @@
     "dependencies": [
       "bootstrap",
       "font-awesome",
-      "fliplet-core"
+      "fliplet-core",
+      "handlebars"
     ],
     "assets": [
       "css/menu.css",
       "js/menu.js"
+    ]
+  },
+  "interface": {
+    "dependencies": [
+      "fliplet-core",
+      "fliplet-studio-ui"
+    ],
+    "assets": [
+      "js/settings.js",
+      "css/settings.css"
     ]
   },
   "settings": {
