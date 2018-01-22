@@ -288,6 +288,8 @@
 .fl-app-menu-toolbar .copyright a {
   color: #333;
   text-decoration: underline;
+  display: inline-block;
+  height: 100%;
 }
 
 .fl-menu .fl-menu-body {
