@@ -34,7 +34,23 @@
   transition: all 0.2s;
 }
 
-.fl-with-top-menu.fl-top-menu-hidden .fl-viewport-header {
+.fl-menu-swipe-handler {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  pointer-events: none;
+  background: transparent;
+  z-index: 10;
+}
+
+.fl-menu-swipe-handler.active {
+  pointer-events: all;
+}
+
+.fl-with-top-menu.fl-top-menu-hidden .fl-viewport-header,
+.fl-with-top-menu.fl-menu-hidden .fl-viewport-header {
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
