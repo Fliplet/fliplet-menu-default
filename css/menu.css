@@ -49,8 +49,7 @@
   pointer-events: all;
 }
 
-.fl-with-top-menu.fl-top-menu-hidden .fl-viewport-header,
-.fl-with-top-menu.fl-menu-hidden .fl-viewport-header {
+.fl-with-top-menu.fl-top-menu-hidden .fl-viewport-header {
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }

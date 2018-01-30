@@ -27,10 +27,10 @@ if (data.hide) {
     var st = $(this).scrollTop();
     if (st > lastScrollTop){
       // downscroll code
-      $('body').addClass('fl-menu-hidden');
+      $('body').addClass('fl-top-menu-hidden');
     } else {
       // upscroll code
-      $('body').removeClass('fl-menu-hidden');
+      $('body').removeClass('fl-top-menu-hidden');
     }
     lastScrollTop = st;
   });
