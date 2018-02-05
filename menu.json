@@ -1,5 +1,5 @@
 {
-  "name": "Dropdown",
+  "name": "Overlay",
   "package": "com.fliplet.menu.default",
   "version": "1.0.0",
   "icon": "img/icon.png",
@@ -11,10 +11,12 @@
     "dependencies": [
       "bootstrap",
       "font-awesome",
-      "fliplet-core"
+      "fliplet-core",
+      "hammer.js"
     ],
     "assets": [
       "css/menu.css",
+      "js/jquery.hammer.js",
       "js/menu.js"
     ]
   },
@@ -29,6 +31,7 @@
     ]
   },
   "settings": {
-    "position": "top"
+    "position": "top",
+    "gifIcon": "img/icon.gif"
   }
 }
