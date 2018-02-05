@@ -1,4 +1,4 @@
-var $menuElement = $('[data-name="Dropdown"]');
+var $menuElement = $('[data-name="Overlay"]');
 var menuInstanceId = $menuElement.data('id');
 var data = Fliplet.Widget.getData(menuInstanceId) || {};
 
@@ -18,7 +18,7 @@ $('[open-about-overlay]').on('click', function() {
   });
 });
 
-$('.fl-menu-swipe-handler').hammer().bind('swiperight', function() {
+$('body').hammer().bind('swiperight', function() {
   Fliplet.Navigate.back();
 });
 
