@@ -151,14 +151,14 @@
 /* Menu Overlay */
 .fl-menu {
   position: fixed;
-  top: 40px;
+  top: 44px;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 20;
   pointer-events: none;
   -webkit-transition: none;
-  -webkit-transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -200%, 0);
 }
 
 .fl-menu.active {
@@ -226,7 +226,7 @@
 }
 
 .fl-app-menu.hasGoBack .fl-menu-panel:before {
-  left: 40px;
+  left: 46px;
 }
 
 .fl-menu.active .fl-menu-panel {

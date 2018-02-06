@@ -20,7 +20,7 @@ $('[open-about-overlay]').on('click', function() {
 
 $('[data-fl-toggle-menu]').click(function (event) {
   event.preventDefault();
-  $('.fl-menu-default .hamburger').toggleClass('is-active');
+  $('.fl-viewport-header .hamburger').toggleClass('is-active');
 });
 
 $('body').hammer().bind('swiperight', function() {
