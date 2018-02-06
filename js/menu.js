@@ -18,6 +18,11 @@ $('[open-about-overlay]').on('click', function() {
   });
 });
 
+$('[data-fl-toggle-menu]').click(function (event) {
+  event.preventDefault();
+  $('.fl-viewport-header .hamburger').toggleClass('is-active');
+});
+
 $('body').hammer().bind('swiperight', function() {
   Fliplet.Navigate.back();
 });

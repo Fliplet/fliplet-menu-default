@@ -84,12 +84,15 @@
 .fl-viewport-header .nav-left {
   left: 0;
   line-height: 44px;
+  font-size: 2em;
 }
 
 .fl-viewport-header .nav-right {
   right: 0;
   width: 44px;
-  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fl-viewport-header-left .nav-right {
@@ -148,14 +151,14 @@
 /* Menu Overlay */
 .fl-menu {
   position: fixed;
-  top: 0;
+  top: 44px;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 20;
   pointer-events: none;
   -webkit-transition: none;
-  -webkit-transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -200%, 0);
 }
 
 .fl-menu.active {
@@ -186,7 +189,7 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  top: 54px;
+  top: 15px;
   background: #fff;
   -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s linear;
   -webkit-transform: translate3d(0, -10px, 0);
@@ -223,7 +226,7 @@
 }
 
 .fl-app-menu.hasGoBack .fl-menu-panel:before {
-  left: 40px;
+  left: 46px;
 }
 
 .fl-menu.active .fl-menu-panel {
@@ -371,4 +374,17 @@
 
 html.no-history .fl-viewport-header .nav-left {
   display: none;
+}
+
+.hamburger {
+  padding: 0;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  display: flex;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #333333;
 }
