@@ -33,7 +33,6 @@
       </span> {{/if}} {{/if}}
 </div>
 <!-- END OF HEADER -->
-
 <!-- MENU OVERLAY -->
 <div class="fl-menu fl-app-menu {{#if location}}fl-menu-default-left{{else}}fl-menu-default{{/if}} {{#if location}}{{#if canGoBack}}hasGoBack{{/if}}{{/if}}">
   <div class="fl-menu-overlay"></div>
@@ -49,7 +48,7 @@
       <div class="fl-list-default">
         <ul class="main-menu">
           {{#each pages}}
-          <li class="linked" data-fl-navigate='{{{action}}}'><i class="fa fa-angle-right" aria-hidden="true"></i><span class="internal-link buttonControl">{{label}}</span></li>
+          <li class="linked" data-fl-navigate='{{{action}}}' data-page-id="{{pageId}}"><i class="fa fa-angle-right" aria-hidden="true"></i><span class="internal-link buttonControl">{{label}}</span></li>
           {{/each}}
         </ul>
       </div>
