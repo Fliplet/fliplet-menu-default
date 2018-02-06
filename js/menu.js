@@ -11,3 +11,8 @@ $('[open-about-overlay]').on('click', function() {
     action: 'about-overlay'
   });
 });
+
+$('[data-fl-toggle-menu]').click(function (event) {
+  event.preventDefault();
+  $('.fl-menu-default .hamburger').toggleClass('is-active');
+});
