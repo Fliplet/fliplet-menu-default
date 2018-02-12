@@ -189,7 +189,7 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  top: 15px;
+  top: 10px;
   background: #fff;
   -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s linear;
   -webkit-transform: translate3d(0, -10px, 0);
@@ -210,14 +210,14 @@
   width: 0;
   height: 0;
   border-color: transparent;
-  border-top: 11px solid transparent;
+  border-top: 10px solid transparent;
   border-right: 11px solid transparent;
   border-bottom: 11px solid #fff;
   border-left: 11px solid transparent;
   display: block;
   position: absolute;
-  top: -22px;
-  right: 1px;
+  top: -20px;
+  right: 0;
 }
 
 .fl-menu-default-left .fl-menu-panel:before {
@@ -355,7 +355,6 @@
 }
 @media screen and (min-width: 640px) {
   .fl-menu-panel {
-    top: 50px;
     bottom: 25px;
     width: 380px;
     right: 10px;
