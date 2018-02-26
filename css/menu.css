@@ -8,6 +8,8 @@
 .fl-viewport-header {
   position: fixed;
   top: 0;
+  top: constant(safe-area-inset-top);
+  top: env(safe-area-inset-top);
   left: 0;
   right: 0;
   height: 44px;
@@ -28,21 +30,6 @@
   transform: translate3d(0, 0, 0);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-.fl-menu-swipe-handler {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  pointer-events: none;
-  background: transparent;
-  z-index: 10;
-}
-
-.fl-menu-swipe-handler.active {
-  pointer-events: all;
 }
 
 .fl-with-top-menu.fl-top-menu-hidden .fl-viewport-header {
@@ -150,6 +137,8 @@
 .fl-menu {
   position: fixed;
   top: 44px;
+  top: calc(constant(safe-area-inset-top) + 44px);
+  top: calc(env(safe-area-inset-top) + 44px);
   right: 0;
   bottom: 0;
   left: 0;
