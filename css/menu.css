@@ -8,6 +8,8 @@
 .fl-viewport-header {
   position: fixed;
   top: 0;
+  top: constant(safe-area-inset-top);
+  top: env(safe-area-inset-top);
   left: 0;
   right: 0;
   height: 44px;
@@ -150,6 +152,8 @@
 .fl-menu {
   position: fixed;
   top: 44px;
+  top: calc(constant(safe-area-inset-top) + 44px);
+  top: calc(env(safe-area-inset-top) + 44px);
   right: 0;
   bottom: 0;
   left: 0;
