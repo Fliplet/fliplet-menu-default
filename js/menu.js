@@ -10,6 +10,7 @@ if (Modernizr.backdropfilter) {
 
 $('.fl-menu-overlay').click(function() {
   $(this).closest('.fl-menu').removeClass('active');
+  $('.fl-viewport-header .hamburger').removeClass('is-active');
 });
 
 $('[open-about-overlay]').on('click', function() {
