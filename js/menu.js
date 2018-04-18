@@ -42,10 +42,4 @@ function init() {
     event.preventDefault();
     $('.fl-viewport-header .hamburger').toggleClass('is-active');
   });
-
-  if (data.swipeBack) {
-    $('body').hammer().bind('swiperight', function() {
-      Fliplet.Navigate.back();
-    });
-  }
 }
