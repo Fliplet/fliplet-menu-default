@@ -1,5 +1,5 @@
 /* MENU */
-[data-fl-widget-instance][data-widget-package="com.fliplet.menu.default"] {
+[data-fl-widget-instance][data-type="menu"] {
   position: fixed !important;
   top: 0;
   top: constant(safe-area-inset-top);
