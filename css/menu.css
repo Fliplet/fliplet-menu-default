@@ -1,4 +1,14 @@
 /* MENU */
+[data-fl-widget-instance][data-type="menu"] {
+  position: fixed !important;
+  top: 0;
+  top: constant(safe-area-inset-top);
+  top: env(safe-area-inset-top);
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 .fl-with-top-menu {
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
@@ -6,12 +16,6 @@
 }
 
 .fl-viewport-header {
-  position: fixed;
-  top: 0;
-  top: constant(safe-area-inset-top);
-  top: env(safe-area-inset-top);
-  left: 0;
-  right: 0;
   height: 44px;
   margin: 0 auto;
   line-height: 43px;
@@ -22,7 +26,6 @@
   border-bottom: 1px solid rgba(127, 127, 127, 0.1);
   font-weight: 300;
   width: 100%;
-  z-index: 10;
   text-align: center;
   color: #333;
   font-size: 1em;
@@ -176,8 +179,7 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  bottom: constant(safe-area-inset-bottom);
-  bottom: env(safe-area-inset-bottom);
+  bottom: calc(10px - env(safe-area-inset-bottom));
   top: 10px;
   background: #fff;
   -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s linear;
