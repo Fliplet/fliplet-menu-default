@@ -398,3 +398,7 @@ html.no-history .fl-viewport-header .nav-left {
 .hamburger-inner::after {
   background-color: #333333;
 }
+
+.has-overlay-menu {
+  overflow-y: hidden;
+}

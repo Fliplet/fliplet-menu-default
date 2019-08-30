@@ -34,6 +34,7 @@ function init() {
   $('.fl-menu-overlay').click(function() {
     $(this).closest('.fl-menu').removeClass('active');
     $('.fl-viewport-header .hamburger').removeClass('is-active');
+    $('body').removeClass('has-overlay-menu');
   });
 
   $('[open-about-overlay]').on('click', function() {
@@ -45,5 +46,6 @@ function init() {
   $('[data-fl-toggle-menu]').click(function (event) {
     event.preventDefault();
     $('.fl-viewport-header .hamburger').toggleClass('is-active');
+    $('body').toggleClass('has-overlay-menu');
   });
 }
