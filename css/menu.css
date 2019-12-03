@@ -15,6 +15,16 @@
   padding-top: 44px;
 }
 
+html.web .fl-with-top-menu main.fl-page-content-wrapper,
+html.android .fl-with-top-menu main.fl-page-content-wrapper {
+  /* Remove the height of the menu */
+  min-height: calc(100vh - 44px);
+}
+
+[data-has-notch].supports-container .fl-with-top-menu {
+  padding-bottom: 0;
+}
+
 .fl-viewport-header {
   height: 44px;
   margin: 0 auto;
