@@ -36,9 +36,11 @@ Fliplet.Widget.onSaveRequest(function() {
     hide: hide
   }).then(function() {
     Fliplet.Widget.complete();
+    Fliplet.Studio.emit('reload-page-preview');
   });
 });
 
 Fliplet.Widget.onCancelRequest(function() {
   Fliplet.Widget.complete();
+  Fliplet.Studio.emit('reload-page-preview');
 });
