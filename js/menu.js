@@ -70,7 +70,7 @@ function init() {
     }
 
     $('.fl-viewport-header .hamburger').toggleClass('is-active');
-    $('body').toggleClass('has-slide-menu');
+    $('body').toggleClass('has-overlay-menu');
 
     if (event.type === 'keydown') {
       $('body').find('.fl-menu').toggleClass('active');
