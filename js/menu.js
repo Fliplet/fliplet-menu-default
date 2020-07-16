@@ -64,9 +64,16 @@ function init() {
     });
   });
 
-  $('[data-fl-toggle-menu]').click(function (event) {
-    event.preventDefault();
+  $('[data-fl-toggle-menu]').on('click keydown', function(event) {
+    if (event.type !== 'click' && event.which !== 32 && event.which !== 13) {
+      return;
+    }
+
     $('.fl-viewport-header .hamburger').toggleClass('is-active');
     $('body').toggleClass('has-overlay-menu');
+
+    if (event.type === 'keydown') {
+      $('body').find('.fl-menu').toggleClass('active');
+    }
   });
 }
