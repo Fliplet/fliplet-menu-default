@@ -41,16 +41,9 @@
 <!-- END OF HEADER -->
 <!-- MENU OVERLAY -->
 <div
-  class="fl-menu fl-app-menu {{#if location}}fl-menu-default-left{{else}}fl-menu-default{{/if}} {{#if location}}{{#if canGoBack}}hasGoBack{{/if}}{{/if}}">
+  class="fl-menu fl-app-menu {{#if location}}fl-menu-default-left{{else}}fl-menu-default{{/if}} {{#if location}}{{#if canGoBack}}hasGoBack{{/if}}{{/if}} hidden">
   <div class="fl-menu-overlay"></div>
   <div class="fl-menu-panel">
-    <div class="fl-menu-foot">
-      <div class="fl-app-menu-toolbar">
-        <div class="copyright">
-          <a href="#" open-about-overlay>About this app</a>
-        </div>
-      </div>
-    </div>
     <div class="fl-menu-body has-no-logo">
       <div class="fl-list-default">
         <ul class="main-menu">
@@ -69,6 +62,13 @@
         </ul>
       </div>
       <div class="fl-app-menu-logo"></div>
+    </div>
+    <div class="fl-menu-foot">
+      <div class="fl-app-menu-toolbar">
+        <div class="copyright">
+          <a class="focus-outline" tabindex="0" href="#" open-about-overlay>About this app</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

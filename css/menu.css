@@ -415,3 +415,7 @@ html.no-history .fl-viewport-header .nav-left {
 .has-overlay-menu {
   overflow-y: hidden;
 }
+
+.hidden {
+  display: none !important;
+}

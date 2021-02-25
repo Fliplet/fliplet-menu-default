@@ -69,11 +69,17 @@ function init() {
       return;
     }
 
-    $('.fl-viewport-header .hamburger').toggleClass('is-active');
-    $('body').toggleClass('has-overlay-menu');
+    var $body = $('body');
 
-    if (event.type === 'keydown') {
-      $('body').find('.fl-menu').toggleClass('active');
-    }
+    $menuElement.find('.fl-menu.fl-app-menu').toggleClass('hidden');
+
+    setTimeout(function() {
+      $('.fl-viewport-header .hamburger').toggleClass('is-active');
+      $body.toggleClass('has-overlay-menu');
+  
+      if (event.type === 'keydown') {
+        $body.find('.fl-menu').toggleClass('active');
+      }
+    }, 0);
   });
 }
