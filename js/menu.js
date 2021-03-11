@@ -64,7 +64,7 @@ function init() {
     });
   });
 
-  $('.nav-right.focus-outline').on('click keydown', function(event) {
+  $menuElement.find('.nav-right.focus-outline').on('click keydown', function(event) {
     if (event.type !== 'click' && event.which !== 32 && event.which !== 13) {
       return;
     }
