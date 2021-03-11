@@ -64,16 +64,19 @@ function init() {
     });
   });
 
-  $('[data-fl-toggle-menu]').on('click keydown', function(event) {
+  $menuElement.find('.nav-right.focus-outline').on('click keydown', function(event) {
     if (event.type !== 'click' && event.which !== 32 && event.which !== 13) {
       return;
     }
 
-    $('.fl-viewport-header .hamburger').toggleClass('is-active');
-    $('body').toggleClass('has-overlay-menu');
-
-    if (event.type === 'keydown') {
-      $('body').find('.fl-menu').toggleClass('active');
-    }
+    var $body = $('body');
+    
+    $body.find('.fl-menu.fl-app-menu').toggleClass('hidden');
+    
+    setTimeout(function() {
+      $('.fl-viewport-header .hamburger').toggleClass('is-active');
+      $body.toggleClass('has-overlay-menu');
+      $body.find('.fl-menu').toggleClass('active');
+    }, 0);
   });
 }
