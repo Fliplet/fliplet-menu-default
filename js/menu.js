@@ -1,6 +1,8 @@
 var $menuElement = $('[data-name="Overlay"]');
 var menuInstanceId = $menuElement.data('id');
 
+$($menuElement).translate();
+
 if (menuInstanceId) {
   init();
 }
@@ -9,14 +11,14 @@ function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
   var lastScrollTop = 0;
 
-  Fliplet.Hooks.on('addExitAppMenuLink', function () {
+  Fliplet.Hooks.on('addExitAppMenuLink', function() {
     var $exitButton = $([
       '<li class="linked with-icon" data-fl-exit-app>',
-        '<div class="fl-menu-icon">',
-          '<i class="fa fa-fw fa-sign-out"></i>',
-        '</div>',
-        '<i class="fa fa-angle-right linked-icon" aria-hidden="true"></i>',
-        '<span class="internal-link buttonControl">' + T('widgets.menuDefault.dataSource.actions.exit') + '</span>',
+      '<div class="fl-menu-icon">',
+      '<i class="fa fa-fw fa-sign-out"></i>',
+      '</div>',
+      '<i class="fa fa-angle-right linked-icon" aria-hidden="true"></i>',
+      '<span class="internal-link buttonControl">' + T('widgets.menuDefault.dataSource.actions.exit') + '</span>',
       '</li>'
     ].join(''));
 
@@ -39,15 +41,17 @@ function init() {
   }
 
   if (data.hide) {
-    $(window).scroll(function(){
+    $(window).scroll(function() {
       var st = $(this).scrollTop();
-      if (st > lastScrollTop){
+
+      if (st > lastScrollTop) {
         // downscroll code
         $('body').addClass('fl-top-menu-hidden');
       } else {
         // upscroll code
         $('body').removeClass('fl-top-menu-hidden');
       }
+
       lastScrollTop = st;
     });
   }
@@ -70,9 +74,9 @@ function init() {
     }
 
     var $body = $('body');
-    
+
     $body.find('.fl-menu.fl-app-menu').toggleClass('hidden');
-    
+
     setTimeout(function() {
       $('.fl-viewport-header .hamburger').toggleClass('is-active');
       $body.toggleClass('has-overlay-menu');
