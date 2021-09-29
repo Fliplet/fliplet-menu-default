@@ -1,7 +1,7 @@
 {
     "widgets": {
-        "menuDefault": {
-            "dataSource": {
+        "menu": {
+            "defaultBar": {
                 "actions": {
                     "back": "Back",
                     "exit": "Exit",
