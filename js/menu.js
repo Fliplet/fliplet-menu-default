@@ -57,7 +57,7 @@ function init() {
   }
 
   $('.fl-menu-overlay').click(function() {
-    $(this).closest('.fl-menu').removeClass('active');
+    $(this).closest('.fl-menu').removeClass('active').addClass('hidden');
     $('.fl-viewport-header .hamburger').removeClass('is-active');
     $('body').removeClass('has-overlay-menu');
   });
