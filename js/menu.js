@@ -12,11 +12,11 @@ function init() {
   Fliplet.Hooks.on('addExitAppMenuLink', function () {
     var $exitButton = $([
       '<li class="linked with-icon" data-fl-exit-app>',
-        '<div class="fl-menu-icon">',
-          '<i class="fa fa-fw fa-sign-out"></i>',
-        '</div>',
-        '<i class="fa fa-angle-right linked-icon" aria-hidden="true"></i>',
-        '<span class="internal-link buttonControl">Exit</span>',
+      '<div class="fl-menu-icon">',
+      '<i class="fa fa-fw fa-sign-out"></i>',
+      '</div>',
+      '<i class="fa fa-angle-right linked-icon" aria-hidden="true"></i>',
+      '<span class="internal-link buttonControl">Exit</span>',
       '</li>'
     ].join(''));
 
@@ -53,7 +53,7 @@ function init() {
   }
 
   $('.fl-menu-overlay').click(function() {
-    $(this).closest('.fl-menu').removeClass('active');
+    $(this).closest('.fl-menu').removeClass('active').addClass('hidden');
     $('.fl-viewport-header .hamburger').removeClass('is-active');
     $('body').removeClass('has-overlay-menu');
   });
