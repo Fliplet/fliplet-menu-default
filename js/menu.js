@@ -1,7 +1,7 @@
 var $menuElement = $('[data-name="Overlay"]');
 var menuInstanceId = $menuElement.data('id');
 
-$($menuElement).translate();
+$menuElement.translate();
 
 if (menuInstanceId) {
   init();
