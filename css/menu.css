@@ -277,6 +277,14 @@ html.android .fl-with-top-menu main.fl-page-content-wrapper {
   bottom: 25px;
 }
 
+.fl-menu .fl-menu-foot {
+  order: 3;
+  right: 0;
+  bottom: 25px;
+  left: 0;
+  z-index: 1;
+}
+
 .fl-app-menu .fl-menu-body.has-no-logo {
   padding-bottom: 0;
 }
