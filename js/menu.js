@@ -11,7 +11,7 @@ function init() {
   var data = Fliplet.Widget.getData(menuInstanceId) || {};
   var lastScrollTop = 0;
 
-  Fliplet.Hooks.on('addExitAppMenuLink', function() {
+  Fliplet.Hooks.on('addExitAppMenuLink', function () {
     var $exitButton = $([
       '<li class="linked with-icon" data-fl-exit-app>',
       '<div class="fl-menu-icon">',
@@ -41,10 +41,10 @@ function init() {
   }
 
   if (data.hide) {
-    $(window).scroll(function() {
+    $(window).scroll(function(){
       var st = $(this).scrollTop();
 
-      if (st > lastScrollTop) {
+      if (st > lastScrollTop){
         // downscroll code
         $('body').addClass('fl-top-menu-hidden');
       } else {
@@ -57,7 +57,7 @@ function init() {
   }
 
   $('.fl-menu-overlay').click(function() {
-    $(this).closest('.fl-menu').removeClass('active');
+    $(this).closest('.fl-menu').removeClass('active').addClass('hidden');
     $('.fl-viewport-header .hamburger').removeClass('is-active');
     $('body').removeClass('has-overlay-menu');
   });
@@ -74,9 +74,9 @@ function init() {
     }
 
     var $body = $('body');
-
+    
     $body.find('.fl-menu.fl-app-menu').toggleClass('hidden');
-
+    
     setTimeout(function() {
       $('.fl-viewport-header .hamburger').toggleClass('is-active');
       $body.toggleClass('has-overlay-menu');
