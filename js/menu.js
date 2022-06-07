@@ -1,8 +1,6 @@
 var $menuElement = $('[data-name="Overlay"]');
 var menuInstanceId = $menuElement.data('id');
 
-$menuElement.translate();
-
 if (menuInstanceId) {
   init();
 }
@@ -84,3 +82,7 @@ function init() {
     }, 0);
   });
 }
+
+Fliplet().then(function() {
+  $menuElement.translate();
+});
