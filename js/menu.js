@@ -16,7 +16,7 @@ function init() {
       '<i class="fa fa-fw fa-sign-out"></i>',
       '</div>',
       '<i class="fa fa-angle-right linked-icon" aria-hidden="true"></i>',
-      '<span class="internal-link buttonControl">Exit</span>',
+      '<span class="internal-link buttonControl">' + T('widgets.menu.default.actions.exit') + '</span>',
       '</li>'
     ].join(''));
 
@@ -41,6 +41,7 @@ function init() {
   if (data.hide) {
     $(window).scroll(function(){
       var st = $(this).scrollTop();
+
       if (st > lastScrollTop){
         // downscroll code
         $('body').addClass('fl-top-menu-hidden');
@@ -48,6 +49,7 @@ function init() {
         // upscroll code
         $('body').removeClass('fl-top-menu-hidden');
       }
+
       lastScrollTop = st;
     });
   }
@@ -80,3 +82,7 @@ function init() {
     }, 0);
   });
 }
+
+Fliplet().then(function() {
+  $menuElement.translate();
+});
